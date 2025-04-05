@@ -1,0 +1,660 @@
+        /* 设置整个页面的字体 */
+        body {
+            font-family: '宋体', SimSun, serif; /* 中文字体 */
+            font-size: 20px; /* 字体大小 */
+        }
+
+        /* 设置英文字体为 Times New Roman */
+        .english-font {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* 设置标题的样式 */
+        h1 {
+            text-align: center; /* 文字居中 */
+            margin: 0; /* 移除默认的外边距 */
+        }
+
+        /* 设置logo-title-container的样式 */
+        .logo-title-container {
+            display: flex;
+            align-items: center; /* 垂直居中对齐 */
+            justify-content: flex-start; /* 水平左对齐 */
+            margin-bottom: 20px; /* 与导航栏的间距 */
+        }
+
+        /* 设置导航栏的样式 */
+        nav {
+            display: flex;
+            justify-content: center; /* 水平居中对齐 */
+             margin-top: 10px;
+            padding: 0 2px; /* 左右留出2px空白 */
+        }
+
+/* 确保激活状态优先级 */
+button.active {
+    background-color: #007BFF !important;
+    border-color: #0056b3 !important;
+    color: white !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* 通过伪元素实现倾斜背景 */
+button.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transform: skewX(-15deg);
+    z-index: -1;
+}
+        /* 设置按钮的样式 */
+     button {
+            font-family: 'KaiTi', 'STKaiti', serif; /* 楷体优先 */
+            font-size: 28px; /* 字体大小 */
+            margin: 0 1.5px; /* 按钮之间的间距 */
+            padding: 8px 30px; /* 按钮内边距 */
+            border: 1px solid #ccc; /* 边框为黑色 */
+            background-color: transparent; /* 背景颜色透明 */
+            position: relative;
+            color: black; /* 按钮文字颜色 */
+            cursor: pointer; /* 鼠标悬停时的指针样式 */
+            transform: skewX(-15deg);
+            transition: background-color 0.3s; /* 背景颜色变化的过渡效果 */
+            min-width: 120px;      /* 最小宽度保证按钮统一性 */
+        }
+
+
+/* 添加聚焦状态 */
+button:focus {
+    outline: 2px solid rgba(74, 144, 226, 0.3);
+    outline-offset: 2px;
+}
+
+/* 添加加载状态 */
+button.loading {
+    position: relative;
+    color: transparent;
+}
+button.loading::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+        button:hover {
+            background-color: #357ABD; /* 鼠标悬停时的背景颜色 */
+        }
+
+        /* 设置图片的样式 */
+        img {
+            width: 150px; /* 图片宽度 */
+            height: auto; /* 图片高度自动 */
+            margin-right: 10px; /* 图片与标题之间的间距 */
+        }
+
+main {
+    padding: 10px;
+}
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+
+/* 添加内容块底部分隔线 */
+.content {
+    position: relative;
+    margin-top: 20px;
+    padding-bottom: 25px; /* 为分割线留出空间 */
+    margin-bottom: 25px;  /* 块间距 */
+}
+
+.content:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e0e0e0; /* 灰色 */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* 可选阴影增强层次 */
+}
+
+/* 调整最后一个内容块不需要分隔线 */
+.content:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.content h3 {
+    margin-bottom: 20px;
+    color: #007BFF;  /* 蓝色 */
+    font-weight: bold; /* 加粗 */
+    border-bottom: 2px solid #e0e0e0;  /* 灰色分隔线 */
+    padding-bottom: 15px;              /* 标题与分隔线间距 */
+    margin-bottom: 25px;               /* 标题与内容间距 */
+    width: fit-content;                /* 使下划线与文字等宽 */
+}
+
+.content ul, .content ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content li {
+    margin-bottom: 20px;
+}
+
+.content a {
+    display: block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+#research h2 {
+    font-size: 30px;
+    color: #007BFF;  /* 蓝色 */
+    font-weight: bold; /* 加粗 */
+    margin-bottom: 25px;  /* 增加下边距 */
+    border-bottom: 2px solid #e0e0e0; /* 可选分隔线 */
+    padding-bottom: 10px;  /* 分隔线与文字间距 */
+}
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #research h2 {
+        font-size: 18px; /* 调大字号 */
+        text-align: center; /* 居中显示 */
+    }
+}
+
+/* 设置研究方向的段落文字 */
+#research p {
+    font-size: 20px;       /* 设置字号 */
+    line-height: 1.5;     /* 增加行高提升可读性 */
+    margin-bottom: 15px;  /* 段落间距 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #research p {
+        font-size: 18px;  /* 小屏幕稍小字号 */
+    }
+}
+
+.profile {
+    background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);/* 添加渐变背景 */
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 20px;
+    font-family: '宋体', SimSun, serif; /* 全局设置宋体 */
+}
+
+.profile-image {
+    width: 260px;
+    height: auto;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.bio-text {
+    flex: 1;
+    font-size: 20px; /* 整体调大字号 */
+    line-height: 1.5; /* 增加行间距提升可读性 */
+}
+
+.name {
+    font-size: 24px; /* 姓名特别放大 */
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+    }
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+    }
+    .bio-text {
+        font-size: 16px; /* 移动端稍小字号 */
+    }
+    .name {
+        font-size: 20px;
+    }
+}
+
+
+.banner-image {
+  width: 98%;
+  max-height: 70vh;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* 移动端特殊处理 */
+@media (max-width: 768px) {
+  .banner-image {
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+/* 成果及论文标题样式 */
+#achievements h2 {
+     font-size: 30px;
+    color: #007BFF;       /* 标题蓝色 */
+    font-weight: bold;    /* 加粗 */
+    margin-bottom: 25px;  /* 增加下边距 */
+    border-bottom: 2px solid #e0e0e0; /* 可选分隔线 */
+    padding-bottom: 10px;  /* 分隔线与文字间距 */
+    width: fit-content;  
+}
+
+
+/* 成果及论文子标题样式 */
+#achievements .category-title h3 {
+    font-family: '宋体', SimSun, serif;
+    font-size: 28px;
+    color: #007BFF;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;  /* 灰色分隔线 */
+    padding-bottom: 10px;              /* 文字与分隔线间距 */
+    margin: 30px 0 20px;               /* 上间距30px 下间距20px */
+    position: relative;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #achievements .category-title h3 {
+        font-size: 24px;
+        margin: 25px 0 15px;
+        border-bottom-width: 1px;
+    }
+    #achievements .category-title h3::after {
+        width: 80px;
+        height: 1px;
+    }
+}
+
+/* 添加编号系统 */
+#achievements .category-title {
+  
+    counter-increment: section;
+}
+#achievements .category-title h3::before {
+     content: counter(section) ". ";
+    margin-right: 5px;
+}
+/* 或者更精确的写法 */
+#achievements ul > .category-title {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* 论文条目全局样式 */
+#achievements h4 {
+    font-size: 20px;      /* 统一字号 */
+    line-height: 1.6;     /* 行高设置 */
+    margin: 15px 0;       /* 上下边距 */
+}
+
+/* 中文字体设置 */
+#achievements h4,
+#achievements h4 span:lang(zh) {
+    font-family: '宋体', SimSun, sans-serif;
+}
+
+/* 英文字体设置 */
+#achievements h4,
+#achievements h4 span:lang(en) {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 图片样式增强 */
+#achievements .scheme-image {
+    margin-top: 15px;
+    border: 2px solid #f0f0f0;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #achievements h4 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+.scheme-image {
+    width: 100%; /* 根据需要调整图片宽度 */
+    max-width: 600px; /* 最大宽度，可根据实际情况调整 */
+    height: auto;
+    margin-top: 10px; /* 图片与标题之间的间距 */
+    border: 1px solid #ddd; /* 添加边框，可选 */
+    border-radius: 5px; /* 添加圆角，可选 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影，可选 */
+}
+
+/* 组员介绍主标题 */
+#members h2 {
+    color: #007BFF;       /* 蓝色 */
+    font-weight: bold;    /* 加粗 */
+    font-size: 30px;      /* 字号 */
+    margin-bottom: 25px;  /* 下边距 */
+    border-bottom: 2px solid #e0e0e0; /* 可选分隔线 */
+    padding-bottom: 10px;  /* 分隔线与文字间距 */
+    width: fit-content;  
+}
+
+/* 导师/当前组员/往届组员子标题 */
+.member-section h3 {
+    color: #007BFF;       /* 蓝色 */
+    font-weight: bold;    /* 加粗 */
+    font-size: 28px;      /* 字号 */
+    margin: 25px 0;       /* 上下边距 */
+}
+
+/* 成员姓名样式 */
+.member-name {
+    font-family: '宋体', SimSun, serif;  /* 宋体 */
+    font-size: 24px !important;        /* 字号 */
+    margin-top: 25px;                  /* 头像与名字间距 */
+}
+
+
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #members h2 {
+        font-size: 26px;
+    }
+    .member-section h3 {
+        font-size: 24px;
+    }
+    .member-name {
+        font-size: 20px !important;
+    }
+}
+
+/* 组员介绍部分的整体样式 */
+.member-section {
+    margin-bottom: 25px;
+}
+
+
+/* 导师部分的样式 */
+.teacher-member-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.member-section h3 {
+    border-bottom: 2px solid #e0e0e0; /* 添加灰色下划线 */
+    padding-bottom: 10px;             /* 增加底部间距 */
+    margin-bottom: 20px;              /* 与下方内容的间距 */
+}
+
+/* 导师姓名样式 */
+.teacher-member-info h4 {
+    font-family: '宋体', SimSun, serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px; /* 姓名与简介间距 */
+}
+
+/* 导师介绍文字样式 */
+.teacher-member-info p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .teacher-member-info h4 {
+        font-size: 24px;
+    }
+    .member-section h3 {
+        font-size: 26px; /* 保持标题层级关系 */
+        border-bottom-width: 1px;
+    }
+}
+
+.teacher-member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* 圆形图片 */
+    margin-right: 50px;
+}
+
+.teacher-member-info {
+    flex: 1;
+}
+
+/* 当前组员和往届组员部分的样式 */
+
+.member-item {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center;    /* 水平居中 */
+    width: auto;            /* 自动宽度 */
+    margin: 0 15px 20px;    /* 间距调整 */
+}
+
+.member-image-circle {
+    width: 150px; /* 图片宽度 */
+    height: 150px; /* 图片高度 */
+    border-radius: 50%; /* 圆形图片 */
+    display: block; /* 确保图片独占一行 */
+    margin: 0 auto; /* 图片水平居中 */
+    margin-bottom: 10px; /* 图片与名字之间的间距 */
+}
+
+.member-name {
+    font-family: '宋体', SimSun, sans-serif;
+    font-size: 24px;        /* 字号放大 */
+    color: #333;
+    text-align: center;
+    width: 100%;            /* 确保文本容器宽度 */
+    padding: 0 10px;        /* 防止文字溢出 */
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 每行四个图片 */
+    gap: 20px; /* 图片之间的间距 */
+}
+
+/* 课题组新闻部分的整体样式 */
+.news-item {
+    margin-bottom: 25px; /* 每条新闻之间的间距 */
+}
+
+.news-image {
+width: 100%; /* 根据需要调整图片宽度 */
+    max-width: 600px; /* 最大宽度，可根据实际情况调整 */
+    height: auto;
+    margin-top: 10px; /* 图片与标题之间的间距 */
+    border: 1px solid #ddd; /* 添加边框，可选 */
+    border-radius: 5px; /* 添加圆角，可选 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影，可选 */
+
+}
+
+/* 课题组新闻主标题 */
+#news h2 {
+    font-family: '宋体', SimSun, serif;
+    font-size: 28px;
+    color: #007BFF;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;  /* 灰色分隔线 */
+    padding-bottom: 15px;              /* 标题与分隔线间距 */
+    margin-bottom: 25px;               /* 标题与内容间距 */
+}
+
+/* 新闻条目内容 */
+.news-item p {
+    font-family: '宋体', SimSun, serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;               /* 文字与图片间距 */
+}
+
+/* 图片样式保持原样 */
+.news-image {
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #news h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .news-item p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+
+/* 添加新闻项间隔线 */
+.news-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+/* 添加日期样式 */
+.news-date {
+    display: block;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 组内活动部分的整体样式 */
+.activity-item {
+    text-align: center; /* 文字和图片居中对齐 */
+    margin-bottom: 20px; /* 每个活动项之间的间距 */
+}
+
+.activity-image {
+    width: 60%; /* 图片宽度占满父容器 */
+    height: auto; /* 保持图片比例 */
+    border-radius: 5px; /* 添加圆角，可选 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影，可选 */
+    margin: 0 auto; /* 图片水平居中 */
+    display: block; /* 确保图片独占一行 */
+}
+
+.activity-description {
+    font-family: '宋体', SimSun, sans-serif;
+    margin-top: 10px; /* 图片与文字之间的间距 */
+    font-size: 24px; /* 文字大小 */
+    color: #333; /* 文字颜色 */
+    line-height: 1.5; /* 行高 */
+}
+
+/* 组内活动标题样式 */
+#activities h2 {
+    font-family: '宋体', SimSun, serif;
+    font-size: 28px;
+    color: #007BFF;
+    font-weight: bold;
+    margin-bottom: 20px;  /* 添加底部间距 */
+    border-bottom: 2px solid #e0e0e0; /* 可选分隔线 */
+    padding-bottom: 10px;  /* 分隔线与文字间距 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #activities h2 {
+        font-size: 24px;  /* 移动端缩小字号 */
+        border-bottom-width: 1px;
+    }
+}
+
+/* 加入我们标题样式 */
+#join-us h2 {
+    font-family: '宋体', SimSun, serif;
+    font-size: 28px;
+    color: #007BFF;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;  /* 灰色分隔线 */
+    padding-bottom: 15px;              /* 标题与分隔线间距 */
+    margin-bottom: 25px;               /* 标题与内容间距 */
+    width: fit-content; 
+}
+#join-us h3 {
+    font-family: '宋体', SimSun, serif;
+    font-size: 28px;
+    color: #007BFF;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;  /* 灰色分隔线 */
+    padding-bottom: 15px;              /* 标题与分隔线间距 */
+    margin-bottom: 25px;               /* 标题与内容间距 */
+}
+/* 加入我们内容样式 */
+#join-us p {
+    font-family: '宋体', SimSun, serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
+    text-indent: 2em;
+    margin-bottom: 15px;
+}
+
+/* 邮箱特殊样式 */
+#join-us p:last-child {
+    color: #007BFF;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    #join-us h2 {
+        font-size: 24px;
+        border-bottom-width: 1px;
+        margin-bottom: 20px;
+    }
+    #join-us p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>东北电力大学杨鹏课题组网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-title-container">
+            <!-- 校徽图片 -->
+            <img src="path_to_first_logo.jpg" alt="校徽1" class="logo">
+            <img src="path_to_second_logo.jpg" alt="校徽2" class="logo">
+            <!-- 标题 -->
+            <h1>东北电力大学杨鹏课题组</h1>
+        </div>
+        <!-- 导航栏 -->
+        <nav>
+            <button data-section="home" onclick="showHome()"><span>首页</span></button>
+            <button data-section="research" onclick="showResearch()"><span>研究方向</span></button>
+            <button data-section="achievements" onclick="showAchievements()"><span>成果及论文</span></button>
+            <button data-section="members" onclick="showMembers()"><span>组员介绍</span></button>
+            <button data-section="news" onclick="showNews()"><span>课题组新闻</span></button>
+            <button data-section="activities" onclick="showActivities()"><span>组内活动</span></button>
+            <button data-section="join-us" onclick="showJoinUs()"><span>加入我们</span></button>
+        </nav>
+    </header>
+
+        <!-- 面包屑导航 -->
+        <div id="breadcrumb">
+            <span id="breadcrumbText">首页 > </span>
+        </div>
+
+    <main id="mainContent">
+        <section id="home" class="active">
+            <img src="banner.jpg" alt="Banner" class="banner-image">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile" class="profile-image">
+                <div class="bio-text">
+                    <div class="bio">
+                        <h4 class="name">杨鹏副教授</h4>
+                    </div>
+                    <p>杨鹏，男，1990年生，山东日照人，东北电力大学建筑工程学院给排水科学与工程专业副教授，硕士研究生导师。师从中国科学院生态环境研究中心原环境水质学国家重点实验室主任王东升研究员/杰青、中国科学院生态环境研究中心张伟军研究员/优青。</p>
+                    <p>主要从事市政污泥减量化处理与资源化处置，先后主持国家自然科学基金青年项目、吉林省青年科技人才托举工程等科研项目十余项，参与国家重点研发计划、国家自然科学基金面上项目等多项。参与获得住建部华夏建设科学技术一等奖、湖北省科技进步二等奖等省部级奖励4项。发表SCI论文20余篇。联合开发的技术成果成功应用于北京、南京、杭州等多个污泥调理深度脱水项目。担任巴塞尔公约亚太区域中心化学品与废物环境管理智库专家、吉林省青年科技工作者协会会员。Water Research、Bioresource Technology、Chemical Engineering Journal等期刊审稿人。</p>
+                </div>
+            </div>
+            <div class="content">
+                <h3>研究方向</h3>
+                <p>固废处理与资源化：</p>
+                <ol>
+                    <li>1. 基于污泥高压脱水的絮体结构调控技术开发</li>
+                    <li>2. 市政污泥能源化利用与污染物削减去除机制</li>
+                    <li>3. 机器学习在污泥脱水领域的工程应用</li>
+                </ol>
+                <a href="javascript:void(0);" onclick="showResearch()">更多 ></a>
+            </div>
+            <div class="content">
+                <h3>成果及论文</h3>
+                <ul>
+                    <p>1.国家自然科学基金青年项目，典型阳离子聚合物与胞外聚合物的互作机制解析与分子动力学模拟，2023年01月至2025年12月，30万元，主持</p>
+                    <p>2.吉林省科学技术协会，吉林省青年科技人才托举工程项目，2022年10月至2024年12月，10万元，主持</p>
+                    <p>3.国家重点研发计划，污泥快速减量与资源化耦合利用技术，2019年01月至2023年12月，119万元，子课题负责人</p>
+                    <p>4.2021年华夏建设科学技术奖一等奖（5/10）</p>
+                    <p>5.2023年湖北省科技进步二等奖（4/10）</p>
+                </ul>
+                <a href="javascript:void(0);" onclick="showAchievements()">更多 ></a>
+            </div>
+            <div class="content">
+                <h3>课题组新闻</h3>
+                <ul>
+                    <li>参加第十八届全国循环经济与生态工业学术研讨会暨中国生态经济学会工业生态经济与技术专业委员会2024年年会</li>
+                    <li>入选第六批吉林省青年科技人才托举工程</li>
+                    <li>参加吉林省青年科技工作者协会第四届会员代表大会</li>
+                </ul>
+                <a href="javascript:void(0);" onclick="showNews()">更多 ></a>
+            </div>
+        </section>
+
+        <section id="research" class="inactive">
+            <h2>研究方向</h2>
+            <p>1. 基于污泥高压脱水的絮体结构调控技术开发</p>
+            <p>2. 市政污泥能源化利用与污染物削减去除机制</p>
+            <p>3. 机器学习在污泥脱水领域的工程应用</p>
+            <p>4. 胞外聚合物的解析与资源化技术</p>
+            <p>5. 金属阳离子与胞外聚合物的互作机制解析与分子动力学模拟</p>
+        </section>
+
+        <section id="achievements" class="inactive">
+            <h2>成果及论文</h2>
+            <ul>
+                <li class="category-title">
+                    <h3>学术论文</h3>
+                </li>
+                <!-- 论文列表 -->
+                    <li>
+                        <h4><span lang="en">1.Boyuan Yang, Yu Zhang, Zexu Chen, Peng Yang, Siwei Peng, Junxia Yu, Dongsheng Wang, Weijun Zhang. Molecular insights into effects of chemical conditioning on dissolved organic phosphorus transformation and bioavailability during sludge composting, Bioresource Technology. 2024, 402, 130809.</span></h4>
+                        <img src="scheme1.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">2. Lanfeng Li, Niannian Sun, Siwei Peng, Qiyuan Yang, Peng Yang , Hao Zhou, Jing Ai, Hang He, Dongsheng Wang, Weijun Zhang. Molecular insights into the degradation of organic matter from secondary swine wastewater effluent: A comparative study of advanced oxidation processes. Chemical Engineering Journal. 2024, 500, 156761.</span></h4>
+                        <img src="scheme2.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">3. Weijun Zhang, Mingyue Tang, Peng Yang , Dongsheng Wang. Micro-interfacial mechanisms on sludge dewaterability enhancement using cerium chloride for preparation of carbon-based functional material. Journal of Hazardous Materials. 2020, 386,121930-121942.</span></h4>
+                        <img src="scheme3.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">4. Peng Yang , Qiyuan Yang , Wenxiang Gao , Lingwei Meng , Fengguo Cui , Hang He , Weijun Zhang, Dongsheng Wang. Impact of Hydroxy-Aluminum and Extracellular polymeric substances interactions on waste activated sludge Dewatering: A molecular perspective. Separation and Purification Technology. 2024, 357, 129954.</span></h4>
+                        <img src="scheme4.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">5. Dandan Li, Yaxin Chen, Peng Yang, Zhendong Guo, Qiandi Wang, Youjing Du, Qiyuan Yang, Lingwei Meng, Fengguo Cui, Jing Ai, Weijun Zhang, Dongsheng Wang. Exploring the synergistic effects of lanthanum on sludge dewatering and carbonization for enhanced performance in lithium-sulfur batteries. Journal of Water Process Engineering. 2025, 69, 106772.</span></h4>
+                        <img src="scheme5.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">6. Yanjun Zhu, Hongyun Li, Peng Yang, Dong Li, Ziyan Wang, Yunpeng Qi, Jie Zhang. Aluminum speciation in polymerized aluminum chloride: Roles and chloride ion migration in sludge dewatering. Journal of Environmental Chemical Engineering. 2023, 12, 111749.</span></h4>
+                        <img src="scheme6.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">7. Peng Yang, Dandan Li, Weijun Zhang, Jing Ai, Sainan Peng, Dongsheng Wang Fengguo Cui. Study of sludge conditioning using organic acids chelated ferrous ion catalyzed NaClO oxidation: Evolution of extracellular polymeric substances and floc structure. Journal of Environmental Management. 2021, 280, 111757-111768.</span></h4>
+                        <img src="scheme7.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">8. Weijun Zhang, Mingyue Tang, Dandan Li, Peng Yang , Shiwei Xu, Dongsheng Wang.Effects of alkalinity on interaction between EPS and hydroxy-aluminum with different speciation in wastewater sludge conditioning with aluminum based inorganic polymer flocculant. Journal of Environmental Sciences. 2020, 100, 257-268.</span></h4>
+                        <img src="scheme8.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">9. Jichao Wang, Dongbo Wu, Lingwei Meng, Ruike Men, Yugeng Li, Lanhe Zhang, Peng Yang, Xiangkun Li, Kaili Ma. Microplastics in anoxic/aerobic membrane bioreactor (A/O-MBR): Characteristics, biofilms, degradation and carrier for antibiotic resistance genes, Journal of Water Process Engineering. 2024, 62, 105395.</span></h4>
+                        <img src="scheme9.jpg"  class="scheme-image">
+                    </li>
+                    <li>
+                        <h4><span lang="en">10. Peng Yang, Dandan Li, Weijun Zhang, Ning Wang,Zhaoyi Yang,  Dongsheng Wang, Teng Ma. Flocculation-dewatering behavior of waste activated sludge particles under chemical conditioning with inorganic polymer flocculant: Effects of typical sludge properties, Chemosphere. 2019, 218, 930-940.</span></h4>
+                        <img src="scheme10.jpg"  class="scheme-image">
+                    </li>
+                <li class="category-title">
+                    <h3>科研项目</h3>
+                </li>
+                <li>
+                    <h4><span lang="zh">1. 国家自然科学基金委 典型阳离子聚合物与胞外聚合物的互作机制解析与分子动力学模拟 2023年01月至2025年12月 30万 主持</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">2. 吉林省科学技术协会 吉林省青年科技人才托举工程项目 2022年10月至2024年12月 10万 主持</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">3. 吉林省教育厅 化学调理-污泥堆肥过程中有机污染物的削减机制及其环境风险研究 2022年01月至2023年12月 2.5万 主持</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">4. 吉林市科技局杰出青年人才培养计划 市政污泥与作物秸秆协同腐熟机制和有机污染物的同步去除效能研究 2021年01月至2022年12月 10万 主持</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">5. 宁夏厚德环保科技有限公司 污水再生处理过程中典型有害污染物识别与控制关键技术及装备研究与应用 2023年12月至2024年12月 2万 主持</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">6. 企业横向课题 污泥调理深度脱水装备研发与应用 2025年01月至2025年12月 10万 主持</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">7. 长江流域环境水科学湖北省重点实验室开放课题 高级调理对河湖底泥污染物迁移转化行为研究 2021年06月至2022年12月 2万 主持</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">8. 国家重点研发计划 污泥快速减量与资源化耦合利用技术 2019年01月至2023年12月 119万 子课题负责人</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">9. 银川市科技局重点研发计划项目 建筑固体废弃物及污泥资源化利用关键技术研究与应用 2021年09月至2023年12月 10万 参与</span></h4>
+                </li>
+                <li class="category-title">
+                    <h3>授权专利</h3>
+                </li>
+                <li>
+                    <h4><span lang="zh">1.一种污泥脱水调理剂及污泥脱水方法，2022.10.18，发明专利</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">2.一种便携式污泥脱水处理小试实验箱及小试实验方法，2024.01.26，发明专利</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">3.一种工业废水中高浓度COD的连续式处理系统及处理工艺，2024.2.2，发明专利</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">4.一种煤气化以及化肥厂含氟废水处理系统，2020.4.24，发明专利</span></h4>
+
+                </li>
+                <li>
+                    <h4><span lang="zh">5.一种含铜高盐印染废水的处理方法，2021.07.06，发明专利</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">6.一种自动采摘器，2023.12.22，发明专利</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">7.一种便携式污泥脱水处理小试实验箱，2019.06.25，实用新型</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">8.一种工业废水中高浓度COD的连续式处理系统，2019.06.25，实用新型</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">9.一种用于污泥脱水的药剂自动投加反应控制装置，2019.06.28，实用新型</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">10.一种工业废水中高浓度COD的间歇式处理系统，2019.04.26，实用新型</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">11.一种自动采摘器，2019.09.03，实用新型</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">12.一种全自动装卸运输烘干测样系统，2019.11.08，实用新型</span></h4>
+                </li>
+        
+                <li class="category-title">
+                    <h3>荣誉奖励</h3>
+                </li>
+                <li>
+                    <h4><span lang="zh">1.2021 华夏建设科学技术奖一等奖（5/10）</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">2.2023 湖北省科技进步二等奖（4/10）</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">3.2023 华夏建设科学技术奖一等奖（10/14）</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">4.2021 中国产学研合作成果二等奖（6/10）</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">5.2022 宁夏水利科学技术奖三等奖（6/10）</span></h4>
+                </li>
+                <li>
+                    <h4><span lang="zh">6.2022 东北电力大学课堂教学质量优秀教师</span></h4>
+                </li>
+
+            </ul>
+        </section>
+
+        <section id="members" class="inactive">
+            <h2>组员介绍</h2>
+            <div class="member-section">
+                <h3>导师</h3>
+                <div class="teacher-member-item">
+                    <img src="teacher.jpg" alt="杨鹏副教授" class="teacher-member-image">
+                    <div class="teacher-member-info">
+                        <h4>杨鹏副教授</h4>
+                        <p>东北电力大学建筑工程学院给排水科学与工程专业副教授，硕士研究生导师。</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="member-section">
+                <h3>当前组员</h3>
+                <div class="member-grid">
+                        <div class="member-item">
+                            <img src="member1.jpg"  alt="成员1" class="member-image-circle">
+                            <h4 class="member-name">杨淇远</h4>
+                        </div>
+                        <div class="member-item">
+                            <img src="member2.jpg" alt="成员2" class="member-image-circle">
+                            <h4 class="member-name">白明鑫</h4>
+                        </div>
+                        <div class="member-item">
+                            <img src="member3.jpg" alt="成员3" class="member-image-circle">
+                            <h4 class="member-name">苑博</h4>
+                        </div>
+                        <div class="member-item">
+                            <img src="member4.jpg" alt="成员4"  class="member-image-circle">
+                            <h4 class="member-name">孙钦昊</h4>
+                        </div>
+                        <div class="member-item">
+                            <img src="member5.jpg" alt="成员5"  class="member-image-circle">
+                            <h4 class="member-name">赵云鹏</h4>
+                        </div>
+                        <div class="member-item">
+                            <img src="member6.jpg" alt="成员6"  class="member-image-circle">
+                            <h4 class="member-name">宋柏润</h4>
+                        </div>
+                        <div class="member-item">
+                            <img src="member7.jpg"   class="member-image-circle">
+                            <h4 class="member-name">项洪喜</h4>
+                        </div>
+                        <div class="member-item">
+                            <img src="member8.jpg"   class="member-image-circle">
+                            <h4 class="member-name">温永辉</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="member-section">
+                <h3>往届组员</h3>
+                <div class="member-grid">
+                    <div class="member-item">
+                        <img src="alum1.jpg" alt="往届成员1" class="member-image-circle">
+                        <h4 class="member-name">李宏运</h4>
+                    </div>
+                    <div class="member-item">
+                        <img src="alum2.jpg" alt="往届成员2" class="member-image-circle">
+                        <h4 class="member-name">张慧鹏</h4>
+                    </div>
+                    <div class="member-item">
+                        <img src="alum3.jpg" alt="往届成员3" class="member-image-circle">
+                        <h4 class="member-name">高文翔</h4>
+                    </div>
+                    <div class="member-item">
+                        <img src="alum4.jpg" alt="往届成员4" class="member-image-circle">
+                        <h4 class="member-name">赵海军</h4>
+                    </div>
+                    <div class="member-item">
+                        <img src="alum5.jpg" alt="往届成员5" class="member-image-circle">
+                        <h4 class="member-name">李承峰</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="inactive">
+            <h2>课题组新闻</h2>
+            <div class="news-item">
+                <p>参加第十八届全国循环经济与生态工业学术研讨会暨中国生态经济学会工业生态经济与技术专业委员会2024年年会</p>
+                <img src="news1.jpg" alt="新闻图片1" class="news-image">
+            </div>
+            <div class="news-item">
+                <p>入选第六批吉林省青年科技人才托举工程</p>
+                <img src="news2.jpg" alt="新闻图片2" class="news-image">
+            </div>
+            <div class="news-item">
+                <p>参加吉林省青年科技工作者协会第四届会员代表大会</p>
+                <img src="news3.jpg" alt="新闻图片3" class="news-image">
+            </div>
+        </section>
+
+        <section id="activities" class="inactive">
+            <h2>组内活动</h2>
+            <div class="activity-item">
+                <img src="activity1.jpg" class="activity-image">
+                <p class="activity-description">2024届毕业聚餐</p>
+            </div>
+        </section>
+
+        <section id="join-us" class="inactive">
+            <h2>加入我们</h2>
+            <h3>招生信息</h3>
+            <p>（1）对于有志于科学研究的同学，表现优异者可获得与中国科学院生态环境研究中心、中国地质大学（武汉）联合培养的机会，并优先获得博士研究生推荐资格；专注于工程应用方向的同学，将结合课题开展技术研发工作，并提供优质的实习推荐及就业发展机会。</p>
+            <p>（2）承诺亲自指导每位研究生的科研工作。目前课题组科研经费充裕，可为研究生提供具有竞争力的助研津贴，并实行"多劳多得"的激励机制，依据课题组相关规定发放优厚的科研绩效奖励。</p>
+            <p>（3）我们欢迎不同专业背景的优秀学子加入，看重学生的实践能力和创新思维。课题组将充分尊重学生的科研兴趣，结合学科前沿与课题需求，支持机器学习、能源资源化等交叉领域的研究。期待学生具备正确的价值观、积极向上的精神风貌以及团队协作意识。</p>
+            <p>（4）毕业学生从事相关工作，考取公务员、事业编2人；去往中国市政工程华北设计研究总院有限公司珠海分公司、中国电子工程设计院等3人；考取博士研究生1人。</p>
+            <p>欢迎有志从事固废处理与资源化等方面研究工作的学生报考！</p>
+            <p>欢迎市政、环境、化学、土木、计算机等专业的优秀本科毕业生加入团队！</p>
+            <p>邮箱：yangpeng326@126.com；yangpeng@neepu.edu.cn</p>
+        </section>
+    </main>
+
+    <script>
+        function showHome() {
+            showSection('home');
+        }
+
+        function showResearch() {
+            showSection('research');
+        }
+
+        function showAchievements() {
+            showSection('achievements');
+        }
+
+        function showMembers() {
+            showSection('members');
+        }
+
+        function showNews() {
+            showSection('news');
+        }
+
+        function showActivities() {
+            showSection('activities');
+        }
+
+        function showJoinUs() {
+            showSection('join-us');
+        }
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+                section.classList.add('inactive');
+            });
+
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.remove('inactive');
+                activeSection.classList.add('active');
+            }
+        }
+    </script>
+
+<script>
+    function showHome() {
+        showSection('home');
+        document.getElementById('breadcrumbText').innerText = '首页 > ';
+    }
+
+    function showResearch() {
+        showSection('research');
+        document.getElementById('breadcrumbText').innerText = '首页 > 研究方向 > ';
+    }
+
+    function showAchievements() {
+        showSection('achievements');
+        document.getElementById('breadcrumbText').innerText = '首页 > 成果及论文 > ';
+    }
+
+    function showMembers() {
+        showSection('members');
+        document.getElementById('breadcrumbText').innerText = '首页 > 组员介绍 > ';
+    }
+
+    function showNews() {
+        showSection('news');
+        document.getElementById('breadcrumbText').innerText = '首页 > 课题组新闻 > ';
+    }
+
+    function showActivities() {
+        showSection('activities');
+        document.getElementById('breadcrumbText').innerText = '首页 > 组内活动 > ';
+    }
+
+    function showJoinUs() {
+        showSection('join-us');
+        document.getElementById('breadcrumbText').innerText = '首页 > 加入我们 > ';
+    }
+
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+            section.classList.add('inactive');
+        });
+
+        const activeSection = document.getElementById(sectionId);
+        if (activeSection) {
+            activeSection.classList.remove('inactive');
+            activeSection.classList.add('active');
+        }
+    }
+</script>
+</body>
+</html>
